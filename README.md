@@ -1,6 +1,6 @@
 # Assignment 6 — Shape Visitor
 
-Student: Asankhan Shyngys, SE-2504. Official topic B from the assignment.
+Student: Shanggerey Akerke, SE-2504. Official topic B from the assignment.
 
 Java 17 compatible, no external dependencies. Circle, Square, and Triangle are immutable elements. Triangle specifically models a right triangle whose base and height are perpendicular legs. All dimensions use the same arbitrary unit and must be positive and finite.
 
