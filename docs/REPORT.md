@@ -96,7 +96,7 @@ Each accept method only performs dispatch. Three elements and three visitors cov
 }
 ```
 
-AreaCalculatorVisitor only calculates area; CsvExportVisitor only serializes dimensions; PerimeterCalculatorVisitor only calculates perimeter. Demo owns presentation and Drawing owns traversal. Visitors implement every visit method with operation-specific logic.
+AreaCalculatorVisitor only calculates area; CsvExportVisitor only serializes dimensions; PerimeterCalculatorVisitor only calculates perimeter. Main owns presentation and Drawing owns traversal. Visitors implement every visit method with operation-specific logic.
 
 ### 6 Limit mutable data and use copies
 
@@ -131,7 +131,7 @@ The perimeter visitor was added in its own commit with no edits to Circle, Squar
 
 ## Sample execution and verification
 
-The three visitors run on exactly the same Drawing instance from Demo.sampleDrawing. Each visitor is newly created before traversal.
+The three visitors run on exactly the same Drawing instance from Main.sampleDrawing. Each visitor is newly created before traversal.
 
 ```
 PS> ./run.ps1
@@ -159,7 +159,7 @@ Compilation passed with javac --release 17 -Xlint:all -Werror. Execution used JD
 
 Checks cover individual and total areas, total perimeter and dispatch across all shapes, exact CSV output, empty drawings, repeated visitor accumulation, defensive input copies, export snapshots, invalid dimensions, null arguments, overflow, locale changes and 100 independently executed calculations.
 
-Run ./run.ps1 for the demo and ./run.ps1 -Test for checks. In IntelliJ IDEA use JDK 17 or newer, mark src/main/java as Sources Root and src/test/java as Test Sources Root, and run shapes.Demo or shapes.ShapeTests.
+Run ./run.ps1 for the demo and ./run.ps1 -Test for checks. In IntelliJ IDEA use JDK 17 or newer, mark src/main/java as Sources Root and src/test/java as Test Sources Root, and run shapes.Main or shapes.ShapeTests.
 
 ## Conclusion and encapsulation tradeoffs
 

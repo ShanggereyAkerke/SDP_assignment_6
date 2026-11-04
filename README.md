@@ -21,13 +21,13 @@ On macOS/Linux:
 mkdir -p build
 find src/main/java src/test/java -name '*.java' > sources.txt
 javac --release 17 -Xlint:all -Werror -d build @sources.txt
-java -cp build shapes.Demo
+java -cp build shapes.Main
 java -cp build shapes.ShapeTests
 ```
 
 ## Project structure
 
-- `src/main/java/shapes`: elements, visitor contract, three visitors, Drawing and Demo.
+- `src/main/java/shapes`: elements, visitor contract, three visitors, Drawing and Main.
 - `src/test/java/shapes/ShapeTests.java`: 141 checks covering formulas, dispatch, invalid values, snapshots, CSV, locale and task isolation.
 - `docs/Shape_Visitor_Report.pdf`: six-page report.
 - `docs/REPORT.md`: editable report content; insert the real GitHub URL before submission.

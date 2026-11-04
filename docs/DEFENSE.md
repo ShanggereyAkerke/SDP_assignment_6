@@ -28,6 +28,6 @@
 
 **Which Chapter 12 rules apply?** Run all tests, remove duplication, express intent and keep the design minimal. Chapter 13 defenses include limiting mutable data, copying data, separating concurrency and keeping tasks independent.
 
-**What are the numeric limits?** Positive finite double dimensions only; overflow is reported; normal floating-point rounding and tiny-value underflow remain possible. Visitors accumulate if reused, so Demo creates fresh ones.
+**What are the numeric limits?** Positive finite double dimensions only; overflow is reported; normal floating-point rounding and tiny-value underflow remain possible. Visitors accumulate if reused, so Main creates fresh ones.
 
 The student must perform the live defense and explain the implementation in their own words.

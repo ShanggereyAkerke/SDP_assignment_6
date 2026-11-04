@@ -1,8 +1,8 @@
 package shapes;
 import java.util.List;
 import java.util.Locale;
-public final class Demo {
-    private Demo() { }
+public final class Main {
+    private Main() { }
     public static Drawing sampleDrawing() {
         return new Drawing(List.of(new Circle(2), new Square(3), new Triangle(3, 4)));
     }

@@ -22,7 +22,7 @@ public final class ShapeTests {
         var visitor = new AreaCalculatorVisitor(); drawing.acceptAll(visitor); return visitor.totalArea();
     }
     public static void main(String[] args) throws Exception {
-        var drawing = Demo.sampleDrawing();
+        var drawing = Main.sampleDrawing();
         close(area(new Drawing(List.of(new Circle(2)))), 4 * Math.PI);
         close(area(new Drawing(List.of(new Square(3)))), 9);
         close(area(new Drawing(List.of(new Triangle(3, 4)))), 6);
