@@ -1,0 +1,54 @@
+@startuml
+interface Shape {
+ +accept(visitor: ShapeVisitor): void
+}
+interface ShapeVisitor {
+ +visitCircle(circle: Circle): void
+ +visitSquare(square: Square): void
+ +visitTriangle(triangle: Triangle): void
+}
+class Circle {
+ -radius: double
+ +radius(): double
+ +accept(visitor: ShapeVisitor): void
+}
+class Square {
+ -side: double
+ +side(): double
+ +accept(visitor: ShapeVisitor): void
+}
+class Triangle {
+ -base: double
+ -height: double
+ +accept(visitor: ShapeVisitor): void
+}
+note right of Triangle : Right triangle with perpendicular legs
+class Drawing {
+ -shapes: List<Shape>
+ +acceptAll(visitor: ShapeVisitor): void
+}
+class AreaCalculatorVisitor {
+ -totalArea: double
+ +totalArea(): double
+}
+class CsvExportVisitor {
+ -rows: StringBuilder
+ +csv(): String
+}
+class PerimeterCalculatorVisitor {
+ -totalPerimeter: double
+ +totalPerimeter(): double
+}
+Shape <|.. Circle
+Shape <|.. Square
+Shape <|.. Triangle
+ShapeVisitor <|.. AreaCalculatorVisitor
+ShapeVisitor <|.. CsvExportVisitor
+ShapeVisitor <|.. PerimeterCalculatorVisitor
+Drawing o-- "0..*" Shape
+Drawing ..> ShapeVisitor : passes to accept
+Shape ..> ShapeVisitor : accept
+ShapeVisitor ..> Circle : visitCircle
+ShapeVisitor ..> Square : visitSquare
+ShapeVisitor ..> Triangle : visitTriangle
+@enduml

@@ -1,0 +1,8 @@
+Drawing: Circle(radius=2), Square(side=3), Triangle(base=3, height=4)
+Total area: 27.566371 square units
+CSV export:
+type,dimension1,dimension2
+Circle,2.000000,
+Square,3.000000,
+Triangle,3.000000,4.000000
+Total perimeter: 36.566371 units
